@@ -18,7 +18,7 @@ describe('Funcionalidade: Checkout', () => {
         cy.get('h4').should('contain', 'Obrigado pelo seu pedido')
     });
 
-    it.only('Deve fazer checkout com sucesso e criar conta do usuário com email faker', () => {
+    it('Deve fazer checkout com sucesso e criar conta do usuário com email faker', () => {
         checkoutPage.preencherCheckoutCriarConta(faker.person.firstName(), faker.person.lastName(), 'Rua sem saida', '404', '12345678', '1234567890', faker.internet.email(), 'Teste123#', 'Teste123#')
         cy.get('h4').should('contain', 'Obrigado pelo seu pedido')
     });
